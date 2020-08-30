@@ -23,7 +23,7 @@ class Front_page : Fragment() {
       Navigation.findNavController(view).navigate(R.id.action_front_page_to_types_of_services)
         }
         binding.fb.setOnClickListener { view:View ->
-        Navigation.findNavController(view).navigate(R.id.action_front_page_to_customer_info)}
+        Navigation.findNavController(view).navigate(R.id.action_front_page_to_servicer1)}
         return binding.root
     }
 

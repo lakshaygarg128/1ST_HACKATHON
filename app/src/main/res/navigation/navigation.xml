@@ -17,23 +17,40 @@
             app:popUpTo="@id/types_of_services"
             app:popUpToInclusive="false" />
         <action
-            android:id="@+id/action_front_page_to_customer_info"
-            app:destination="@id/customer_info"
-            app:popUpTo="@id/customer_info" />
+            android:id="@+id/action_front_page_to_servicer1"
+            app:destination="@id/servicer1" />
     </fragment>
     <fragment
         android:id="@+id/types_of_services"
         android:name="com.example.trial.Types_of_services"
         android:label="fragment_types_of_services"
         tools:layout="@layout/fragment_types_of_services" />
-    <fragment
-        android:id="@+id/customer_info"
-        android:name="com.example.trial.Customer_info"
-        android:label="fragment_customer_info"
-        tools:layout="@layout/fragment_customer_info" />
     <activity
         android:id="@+id/splashscreenactivity"
         android:name="com.example.trial.Splashscreenactivity"
         android:label="activity_splashscreenactivity"
         tools:layout="@layout/activity_splashscreenactivity" />
+    <fragment
+        android:id="@+id/servicer1"
+        android:name="com.example.trial.Servicer1"
+        android:label="fragment_servicer1"
+        tools:layout="@layout/fragment_servicer1" >
+        <action
+            android:id="@+id/action_servicer1_to_servicer2"
+            app:destination="@id/servicer2" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicer2"
+        android:name="com.example.trial.Servicer2"
+        android:label="fragment_servicer2"
+        tools:layout="@layout/fragment_servicer2" >
+        <action
+            android:id="@+id/action_servicer2_to_servicer3"
+            app:destination="@id/servicer3" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicer3"
+        android:name="com.example.trial.Servicer3"
+        android:label="fragment_servicer3"
+        tools:layout="@layout/fragment_servicer3" />
 </navigation>
