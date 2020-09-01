@@ -93,7 +93,7 @@
             android:layout_height="62dp"
             android:layout_marginBottom="28dp"
             android:background="#ffffff"
-            android:text="Login"
+            android:text="Sign up"
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
