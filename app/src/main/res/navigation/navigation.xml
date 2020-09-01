@@ -11,11 +11,11 @@
         android:label="fragment_front_page"
         tools:layout="@layout/fragment_front_page" >
         <action
-            android:id="@+id/action_front_page_to_servicer2"
-            app:destination="@id/servicer2" />
-        <action
             android:id="@+id/action_front_page_to_register_account"
             app:destination="@id/register_account" />
+        <action
+            android:id="@+id/action_front_page_to_types_of_services"
+            app:destination="@id/types_of_services" />
     </fragment>
     <fragment
         android:id="@+id/types_of_services"
@@ -23,11 +23,11 @@
         android:label="fragment_types_of_services"
         tools:layout="@layout/fragment_types_of_services" >
         <action
-            android:id="@+id/action_types_of_services_to_mapsActivity"
-            app:destination="@id/mapsActivity" />
-        <action
             android:id="@+id/action_types_of_services_to_list"
             app:destination="@id/list" />
+        <action
+            android:id="@+id/action_types_of_services_to_mapsActivity"
+            app:destination="@id/mapsActivity" />
     </fragment>
     <activity
         android:id="@+id/splashscreenactivity"
@@ -43,11 +43,8 @@
             android:id="@+id/action_servicer1_to_servicer2"
             app:destination="@id/servicer2" />
         <action
-            android:id="@+id/action_servicer1_to_mapsActivity"
-            app:destination="@id/mapsActivity" />
-        <action
-            android:id="@+id/action_servicer1_to_after_registration"
-            app:destination="@id/after_registration" />
+            android:id="@+id/action_servicer1_to_types_of_services"
+            app:destination="@id/types_of_services" />
     </fragment>
     <fragment
         android:id="@+id/servicer2"
@@ -58,8 +55,8 @@
             android:id="@+id/action_servicer2_to_servicer3"
             app:destination="@id/servicer3" />
         <action
-            android:id="@+id/action_servicer2_to_types_of_services"
-            app:destination="@id/types_of_services" />
+            android:id="@+id/action_servicer2_to_types_services_vendor"
+            app:destination="@id/types_services_vendor" />
     </fragment>
     <fragment
         android:id="@+id/servicer3"
@@ -70,21 +67,11 @@
             android:id="@+id/action_servicer3_to_servicer1"
             app:destination="@id/servicer1" />
     </fragment>
-    <activity
-        android:id="@+id/mapsActivity"
-        android:name="com.example.trial.MapsActivity"
-        android:label="activity_maps"
-        tools:layout="@layout/activity_maps" />
     <fragment
         android:id="@+id/customer_info"
         android:name="com.example.trial.Customer_info"
         android:label="fragment_customer_info"
         tools:layout="@layout/fragment_customer_info" />
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.trial.MainActivity"
-        android:label="fragment_after_registration"
-        tools:layout="@layout/fragment_after_registration" />
     <fragment
         android:id="@+id/register_account"
         android:name="com.example.trial.Register_account"
@@ -92,6 +79,9 @@
         <action
             android:id="@+id/action_register_account_to_login_sinup_1"
             app:destination="@id/login_sinup_1" />
+        <action
+            android:id="@+id/action_register_account_to_sign_up"
+            app:destination="@id/sign_up" />
     </fragment>
     <fragment
         android:id="@+id/list"
@@ -109,4 +99,26 @@
         android:id="@+id/after_registration"
         android:name="com.example.trial.After_registration"
         android:label="After_registration" />
+    <fragment
+        android:id="@+id/sign_up"
+        android:name="com.example.trial.Sign_up"
+        android:label="Sign_up" >
+        <action
+            android:id="@+id/action_sign_up_to_servicer2"
+            app:destination="@id/servicer2" />
+    </fragment>
+    <fragment
+        android:id="@+id/types_services_vendor"
+        android:name="com.example.trial.Types_services_vendor"
+        android:label="fragment_types_services_vendor"
+        tools:layout="@layout/fragment_types_services_vendor" >
+        <action
+            android:id="@+id/action_types_services_vendor_to_after_registration"
+            app:destination="@id/after_registration" />
+    </fragment>
+    <activity
+        android:id="@+id/mapsActivity"
+        android:name="com.example.trial.MapsActivity"
+        android:label="activity_maps"
+        tools:layout="@layout/activity_maps" />
 </navigation>

@@ -44,11 +44,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.461"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fb"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up"
             app:layout_constraintVertical_bias="0.256" />
 
         <Button
-            android:id="@+id/fb"
+            android:id="@+id/sign_up"
             android:layout_width="331dp"
             android:layout_height="64dp"
             android:background="#23B9BF"
