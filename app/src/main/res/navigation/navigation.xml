@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/front_page">
+
+    <fragment
+        android:id="@+id/front_page"
+        android:name="com.example.trial.Front_page"
+        android:label="fragment_front_page"
+        tools:layout="@layout/fragment_front_page" >
+        <action
+            android:id="@+id/action_front_page_to_types_of_services"
+            app:destination="@id/types_of_services"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/types_of_services"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_front_page_to_servicer1"
+            app:destination="@id/servicer1" />
+    </fragment>
+    <fragment
+        android:id="@+id/types_of_services"
+        android:name="com.example.trial.Types_of_services"
+        android:label="fragment_types_of_services"
+        tools:layout="@layout/fragment_types_of_services" >
+        <action
+            android:id="@+id/action_types_of_services_to_mapsActivity"
+            app:destination="@id/mapsActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/splashscreenactivity"
+        android:name="com.example.trial.Splashscreenactivity"
+        android:label="activity_splashscreenactivity"
+        tools:layout="@layout/activity_splashscreenactivity" />
+    <fragment
+        android:id="@+id/servicer1"
+        android:name="com.example.trial.Servicer1"
+        android:label="fragment_servicer1"
+        tools:layout="@layout/fragment_servicer1" >
+        <action
+            android:id="@+id/action_servicer1_to_servicer2"
+            app:destination="@id/servicer2" />
+        <action
+            android:id="@+id/action_servicer1_to_mapsActivity"
+            app:destination="@id/mapsActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicer2"
+        android:name="com.example.trial.Servicer2"
+        android:label="fragment_servicer2"
+        tools:layout="@layout/fragment_servicer2" >
+        <action
+            android:id="@+id/action_servicer2_to_servicer3"
+            app:destination="@id/servicer3" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicer3"
+        android:name="com.example.trial.Servicer3"
+        android:label="fragment_servicer3"
+        tools:layout="@layout/fragment_servicer3" />
+    <activity
+        android:id="@+id/mapsActivity"
+        android:name="com.example.trial.MapsActivity"
+        android:label="activity_maps"
+        tools:layout="@layout/activity_maps" />
+    <fragment
+        android:id="@+id/login_sinup_1"
+        android:name="com.example.trial.Login_sinup_1"
+        android:label="Login_sinup_1" />
+</navigation>
