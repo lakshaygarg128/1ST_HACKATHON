@@ -24,7 +24,11 @@
         android:id="@+id/types_of_services"
         android:name="com.example.trial.Types_of_services"
         android:label="fragment_types_of_services"
-        tools:layout="@layout/fragment_types_of_services" />
+        tools:layout="@layout/fragment_types_of_services" >
+        <action
+            android:id="@+id/action_types_of_services_to_mapsActivity"
+            app:destination="@id/mapsActivity" />
+    </fragment>
     <activity
         android:id="@+id/splashscreenactivity"
         android:name="com.example.trial.Splashscreenactivity"
@@ -38,6 +42,9 @@
         <action
             android:id="@+id/action_servicer1_to_servicer2"
             app:destination="@id/servicer2" />
+        <action
+            android:id="@+id/action_servicer1_to_mapsActivity"
+            app:destination="@id/mapsActivity" />
     </fragment>
     <fragment
         android:id="@+id/servicer2"
@@ -53,4 +60,13 @@
         android:name="com.example.trial.Servicer3"
         android:label="fragment_servicer3"
         tools:layout="@layout/fragment_servicer3" />
+    <activity
+        android:id="@+id/mapsActivity"
+        android:name="com.example.trial.MapsActivity"
+        android:label="activity_maps"
+        tools:layout="@layout/activity_maps" />
+    <fragment
+        android:id="@+id/login_sinup_1"
+        android:name="com.example.trial.Login_sinup_1"
+        android:label="Login_sinup_1" />
 </navigation>

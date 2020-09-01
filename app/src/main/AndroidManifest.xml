@@ -9,6 +9,7 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -31,11 +32,9 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
-        <activity android:name=".MainActivity" />
-        <activity
-            android:name=".Splashscreenactivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/title_activity_maps">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
