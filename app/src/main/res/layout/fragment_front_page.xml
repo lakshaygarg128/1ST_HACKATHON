@@ -11,6 +11,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/gradient_color"
        >
 
         <ImageView
@@ -29,6 +30,7 @@
             android:layout_width="250dp"
             android:layout_height="56dp"
             android:text="Problem near."
+            android:textColor="#fff"
             android:textSize="35sp"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -43,6 +45,7 @@
             android:layout_width="250dp"
             android:layout_height="56dp"
             android:text="Contact here."
+            android:textColor="#fff"
             android:textSize="35sp"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -58,6 +61,7 @@
             android:layout_height="79dp"
             android:text="Modern solution to every household problem while helping migrants."
             android:textSize="20sp"
+            android:textColor="#fff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.52"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -84,6 +88,7 @@
             android:text="Continue as Customer"
             android:background="#23B9BF"
             android:textAllCaps="false"
+
             android:textColor="#ffffff"
             android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -116,6 +121,7 @@
             android:layout_height="60dp"
             android:text="By continuing, you agree to the Job Search's Terms of use and Privacy Policy"
             android:textSize="15sp"
+            android:textColor="#fff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.462"
             app:layout_constraintLeft_toLeftOf="parent"

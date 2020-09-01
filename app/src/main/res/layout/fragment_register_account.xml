@@ -13,10 +13,12 @@
         android:layout_height="match_parent"
         >
 
+
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="383dp"
-            android:layout_height="200dp"
+            android:layout_width="373dp"
+            android:layout_height="196dp"
+            android:layout_marginBottom="492dp"
             android:src="@mipmap/logonewbad_foreground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -24,39 +26,35 @@
             app:layout_constraintTop_toBottomOf="@+id/FrameLayout1"
             app:layout_constraintVertical_bias="0.029" />
 
-        <FrameLayout
-            android:layout_below="@+id/no_network_bar"
-            android:id="@+id/FrameLayout1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-
-        </FrameLayout>
-
-
         <Button
             android:id="@+id/login"
             android:layout_width="333dp"
             android:layout_height="63dp"
             android:background="#23B9BF"
-            android:text="New Member"
+            android:text="Log in"
+            android:drawableLeft="@mipmap/login"
+            android:paddingRight="60dp"
+            android:textStyle="bold"
+            android:scaleX="0dp"
             android:textAllCaps="false"
             android:textColor="#ffffff"
             android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.462"
+            app:layout_constraintHorizontal_bias="0.461"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.853" />
+            app:layout_constraintTop_toBottomOf="@+id/fb"
+            app:layout_constraintVertical_bias="0.256" />
 
         <Button
             android:id="@+id/fb"
             android:layout_width="331dp"
             android:layout_height="64dp"
             android:background="#23B9BF"
-            android:text="Already Member"
+            android:text="Sign up"
+            android:drawableLeft="@mipmap/signup"
+            android:paddingRight="60dp"
+            android:textStyle="bold"
             android:textAllCaps="false"
             android:textColor="#ffffff"
             android:textSize="22sp"
@@ -64,8 +62,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.45"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/FrameLayout1"
-            app:layout_constraintVertical_bias="0.631" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.402" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
