@@ -77,7 +77,7 @@
 
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/login"
             android:layout_width="333dp"
             android:layout_height="63dp"
             android:drawableLeft="@mipmap/consumer_round"

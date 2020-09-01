@@ -19,11 +19,11 @@ class Front_page : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val binding:FragmentFrontPageBinding=DataBindingUtil.inflate(inflater,R.layout.fragment_front_page,container,false)
-        binding.button2.setOnClickListener {view :View ->
+        binding.login.setOnClickListener {view :View ->
       Navigation.findNavController(view).navigate(R.id.action_front_page_to_types_of_services)
         }
         binding.fb.setOnClickListener { view:View ->
-        Navigation.findNavController(view).navigate(R.id.action_front_page_to_servicer1)}
+        Navigation.findNavController(view).navigate(R.id.action_front_page_to_login_sinup_1)}
         return binding.root
     }
 

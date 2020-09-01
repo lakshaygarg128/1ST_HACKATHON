@@ -62,7 +62,7 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <EditText
-            android:id="@+id/editTextNumber"
+            android:id="@+id/emailid"
             android:layout_width="199dp"
             android:layout_height="49dp"
             android:ems="10"
@@ -75,7 +75,7 @@
             app:layout_constraintVertical_bias="0.227" />
 
         <EditText
-            android:id="@+id/editTextNumber2"
+            android:id="@+id/password"
             android:layout_width="199dp"
             android:layout_height="49dp"
             android:ems="10"
@@ -88,7 +88,7 @@
             app:layout_constraintVertical_bias="0.43" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/login"
             android:layout_width="211dp"
             android:layout_height="62dp"
             android:layout_marginBottom="28dp"

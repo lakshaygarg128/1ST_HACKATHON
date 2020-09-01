@@ -17,8 +17,8 @@
             app:popUpTo="@id/types_of_services"
             app:popUpToInclusive="false" />
         <action
-            android:id="@+id/action_front_page_to_servicer1"
-            app:destination="@id/servicer1" />
+            android:id="@+id/action_front_page_to_login_sinup_1"
+            app:destination="@id/login_sinup_1" />
     </fragment>
     <fragment
         android:id="@+id/types_of_services"
@@ -68,5 +68,9 @@
     <fragment
         android:id="@+id/login_sinup_1"
         android:name="com.example.trial.Login_sinup_1"
-        android:label="Login_sinup_1" />
+        android:label="Login_sinup_1" >
+        <action
+            android:id="@+id/action_login_sinup_1_to_servicer1"
+            app:destination="@id/servicer1" />
+    </fragment>
 </navigation>
