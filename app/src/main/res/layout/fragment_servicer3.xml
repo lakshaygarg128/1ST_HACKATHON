@@ -76,7 +76,7 @@
             android:layout_width="211dp"
             android:layout_height="62dp"
             android:background="#ffffff"
-            android:text="Finish"
+            android:text="NEXT"
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"

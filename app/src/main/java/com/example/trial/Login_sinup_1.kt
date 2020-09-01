@@ -1,16 +1,13 @@
 package com.example.trial
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import com.example.trial.ViewModel.EmailViewModel
 import com.example.trial.databinding.FragmentLoginSinup1Binding
 import com.google.firebase.database.FirebaseDatabase
@@ -55,6 +52,10 @@ class Login_sinup_1 : Fragment() {
 
             //Fot output
             ref.child(uploadEmailId).setValue(hero)
+
+            binding.login.setOnClickListener { view :View ->
+                Navigation.findNavController(view).navigate(R.id.action_login_sinup_1_to_servicer2)
+            }
         }
         return binding.root
     }

@@ -38,6 +38,31 @@ class Types_services_vendor : Fragment() {
             Navigation.findNavController(view)
                 .navigate(R.id.action_types_of_services_to_mapsActivity)
         }
+        binding.plumber.setOnClickListener { view :View ->
+            Navigation.findNavController(view).navigate(R.id.action_types_services_vendor_to_after_registration)        }
+
+        binding.painter.setOnClickListener { view :View ->
+            Navigation.findNavController(view).navigate(R.id.action_types_services_vendor_to_after_registration)        }
+
+        binding.electrician.setOnClickListener { view :View ->
+            Navigation.findNavController(view).navigate(R.id.action_types_services_vendor_to_after_registration)        }
+
+        binding.AC.setOnClickListener { view :View ->
+            Navigation.findNavController(view).navigate(R.id.action_types_services_vendor_to_after_registration)
+        }
+
+        binding.salon.setOnClickListener { view :View ->
+            Navigation.findNavController(view).navigate(R.id.action_types_services_vendor_to_after_registration  )      }
+
+        binding.carpenter.setOnClickListener { view :View ->
+            Navigation.findNavController(view).navigate(R.id.action_types_services_vendor_to_after_registration   )     }
+
+        binding.gardening.setOnClickListener { view :View ->
+            Navigation.findNavController(view).navigate(R.id.action_types_services_vendor_to_after_registration    )    }
+
+        binding.appliances.setOnClickListener { view :View ->
+            Navigation.findNavController(view).navigate(R.id.action_types_services_vendor_to_after_registration)
+        }
         return binding.root
     }
 }

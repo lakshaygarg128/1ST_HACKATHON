@@ -45,6 +45,9 @@
         <action
             android:id="@+id/action_servicer1_to_types_of_services"
             app:destination="@id/types_of_services" />
+        <action
+            android:id="@+id/action_servicer1_to_types_services_vendor"
+            app:destination="@id/types_services_vendor" />
     </fragment>
     <fragment
         android:id="@+id/servicer2"
@@ -54,9 +57,6 @@
         <action
             android:id="@+id/action_servicer2_to_servicer3"
             app:destination="@id/servicer3" />
-        <action
-            android:id="@+id/action_servicer2_to_types_services_vendor"
-            app:destination="@id/types_services_vendor" />
     </fragment>
     <fragment
         android:id="@+id/servicer3"
@@ -92,20 +92,24 @@
         android:name="com.example.trial.Login_sinup_1"
         android:label="Login_sinup_1" >
         <action
-            android:id="@+id/action_login_sinup_1_to_after_registration"
-            app:destination="@id/after_registration" />
+            android:id="@+id/action_login_sinup_1_to_servicer2"
+            app:destination="@id/servicer2" />
     </fragment>
     <fragment
         android:id="@+id/after_registration"
         android:name="com.example.trial.After_registration"
-        android:label="After_registration" />
+        android:label="After_registration" >
+        <action
+            android:id="@+id/action_after_registration_to_servicer2"
+            app:destination="@id/servicer2" />
+    </fragment>
     <fragment
         android:id="@+id/sign_up"
         android:name="com.example.trial.Sign_up"
         android:label="Sign_up" >
         <action
-            android:id="@+id/action_sign_up_to_servicer2"
-            app:destination="@id/servicer2" />
+            android:id="@+id/action_sign_up_to_after_registration"
+            app:destination="@id/after_registration" />
     </fragment>
     <fragment
         android:id="@+id/types_services_vendor"
