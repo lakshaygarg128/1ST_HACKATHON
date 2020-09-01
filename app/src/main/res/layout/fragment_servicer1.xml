@@ -91,7 +91,7 @@
             android:id="@+id/imageView"
             android:layout_width="377dp"
             android:layout_height="140dp"
-            android:src="@mipmap/logonewbad_foreground"
+            android:src="@mipmap/bg_new_foreground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
