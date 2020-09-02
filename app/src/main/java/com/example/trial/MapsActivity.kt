@@ -1,23 +1,27 @@
 package com.example.trial
 
 import android.content.pm.PackageManager
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import java.util.*
+
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
-
-    private lateinit var map: GoogleMap
     private val REQUEST_LOCATION_PERMISSION = 1
 
+    private lateinit var map: GoogleMap
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -38,15 +42,19 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
 
-        var latitude =28.680282
-            var longitude =77.298414
-        val homeLatLng = LatLng(latitude, longitude)
+        //These coordinates represent the latitude and longitude of the Googleplex.
+        val latitude = 37.422160
+        val longitude = -122.084270
         val zoomLevel = 15f
+
+        val homeLatLng = LatLng(latitude, longitude)
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(homeLatLng, zoomLevel))
         map.addMarker(MarkerOptions().position(homeLatLng))
-        setMapLongClick(map)
+
+        setMapLongClick( map )
         enableMyLocation()
     }
+
     private fun setMapLongClick(map: GoogleMap) {
         map.setOnMapLongClickListener { latLng ->
             map.addMarker(
@@ -55,6 +63,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             )
         }
     }
+
     private fun isPermissionGranted() : Boolean {
         return ContextCompat.checkSelfPermission(
             this,
