@@ -1,24 +1,22 @@
 package com.example.trial
 
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import java.util.*
 
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private val REQUEST_LOCATION_PERMISSION = 1
 
-    private lateinit var map: GoogleMap
+    private lateinit var mMap: GoogleMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -40,19 +38,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      * installed Google Play services and returned to the app.
      */
     override fun onMapReady(googleMap: GoogleMap) {
-        map = googleMap
+        mMap = googleMap
 
-        //These coordinates represent the latitude and longitude of the Googleplex.
-        val latitude = 37.422160
-        val longitude = -122.084270
-        val zoomLevel = 15f
-
-        val homeLatLng = LatLng(latitude, longitude)
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(homeLatLng, zoomLevel))
-        map.addMarker(MarkerOptions().position(homeLatLng))
-
-        setMapLongClick( map )
-        enableMyLocation()
+        // Add a marker in Sydney and move the camera
+        val sydney = LatLng(-34.0, 151.0)
+        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+       setMapLongClick( mMap )
+       enableMyLocation()
     }
 
     private fun setMapLongClick(map: GoogleMap) {
@@ -71,7 +64,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
     private fun enableMyLocation() {
         if (isPermissionGranted()) {
-            map.isMyLocationEnabled = true
+            mMap.isMyLocationEnabled = true
         }
         else {
             ActivityCompat.requestPermissions(
